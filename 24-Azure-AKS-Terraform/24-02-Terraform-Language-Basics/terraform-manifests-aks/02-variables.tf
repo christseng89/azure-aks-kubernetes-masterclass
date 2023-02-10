@@ -28,3 +28,9 @@ variable "environment" {
   description = "This variable defines the Environment"
   default     = "dev"
 }
+
+variable "owner" {
+  type        = string
+  description = "This variable defines the Owner"
+  default     = "Azure-Test"
+}

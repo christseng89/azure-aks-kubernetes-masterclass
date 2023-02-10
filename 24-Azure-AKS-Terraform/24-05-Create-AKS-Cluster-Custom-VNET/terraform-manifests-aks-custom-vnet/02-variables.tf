@@ -29,7 +29,9 @@ variable "environment" {
 
 # SSH Public Key for Linux VMs
 variable "ssh_public_key" {
-  default     = "~/.ssh/aks-prod-sshkeys-terraform/aksprodsshkey.pub"
+  # default     = "~/.ssh/aks-prod-sshkeys-terraform/aksprodsshkey.pub"
+  // From your PC .ssh folder
+  default     = "~/.ssh/known_hosts"
   description = "This variable defines the SSH Public Key for Linux k8s Worker nodes"
 }
 
@@ -47,3 +49,8 @@ variable "windows_admin_password" {
   description = "This variable defines the Windows admin password k8s Worker nodes"
 }
 
+variable "owner" {
+  type        = string
+  description = "This variable defines the Owner"
+  default     = "Azure-Test"
+}
